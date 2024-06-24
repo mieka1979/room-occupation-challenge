@@ -3,10 +3,10 @@ room-occupation-challenge
 
 To build project please run <br>
 ./gradlew bootJar
-<br>
+<br><br>
 To run application <br>
 java -jar <jar generated in build/libs folder like RoomOccupancy-1.0-SNAPSHOT.jar>
-<br>
+<br><br>
 Application stores test data in memory database. To test ruuning application please use ex.:
 <br>
 localhost:8080/room/occupancy?premium=2&economy=3
