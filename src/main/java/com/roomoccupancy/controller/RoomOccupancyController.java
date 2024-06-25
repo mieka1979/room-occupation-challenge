@@ -18,7 +18,9 @@ public class RoomOccupancyController {
     @GetMapping("/room/occupancy")
     public OccupancyDetails getRoomOccupancy(@RequestParam(value = "premium", defaultValue = "0") int premiumRooms,
                                              @RequestParam(value = "economy", defaultValue = "0") int economyRooms,
-                                             @RequestParam(value = "date", required=false) Date date){
+                                              @RequestParam(value = "date", required=false)
+                                              @DateTimeFormat(pattern = "yyyy-MM-dd")
+                                                 Date date){
         if(date!=null){
            return occupancyService.getOccupancyForDate(premiumRooms, economyRooms, date);
         } else {
