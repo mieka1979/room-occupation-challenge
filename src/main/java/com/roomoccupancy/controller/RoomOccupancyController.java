@@ -19,7 +19,6 @@ public class RoomOccupancyController {
     public OccupancyDetails getRoomOccupancy(@RequestParam(value = "premium", defaultValue = "0") int premiumRooms,
                                              @RequestParam(value = "economy", defaultValue = "0") int economyRooms,
                                              @RequestParam(value = "date", required=false) Date date){
-        System.out.println("JESTEM!!!!");
         if(date!=null){
            return occupancyService.getOccupancyForDate(premiumRooms, economyRooms, date);
         } else {
